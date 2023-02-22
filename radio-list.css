@@ -1,67 +1,3 @@
-radio-list {
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-radio-list li {
-  width: 45%;
-  height: 40px;
-  background-color: lightgray;
-}
-
-radio-list label {
- display: block;
-height: 100%;
-}
-
-radio-list input {
-  display: none;
-}
-
-radio-list p {
-  position: relative;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-radio-list p::before,
-radio-list p::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  border-radius: 50%;
-}
-
-radio-list p::before {
-  width: 20px;
-  height: 20px;
-  background-color: #ff4242;
-}
-radio-list p::after {
-  width: 10px;
-  height: 10px;
-  transform: translate(21%, -66%);
-}
-
-._icon-check::after {
-  content: "\e901";
-  color: #fff;
-}
-
-
-
-radio-list :checked + ._icon-check::after {
- color: black;
-}
-
 /* ==================================================== */
 
 radio-list-img {
@@ -115,4 +51,63 @@ radio-list-img input {
 
 radio-list-img :checked + ._icon-check::after {
   color: black;
+}
+
+/* ==================================================================== */
+
+radio-list {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+radio-list li {
+  width: 40%;
+  background-color: #848080;
+  height: 40px;
+}
+radio-list label {
+  display: flex;
+  position: relative;
+  height: 100%;
+}
+
+radio-list input {
+  display: none;
+}
+
+radio-list i::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(15%, -50%);
+}
+radio-list i::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 22px;
+  height: 22px;
+  background-color: #fdfbfb;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+radio-list p {
+  padding-left: 50px;
+  display: flex;
+  align-items: center;
+}
+
+._icon-check::after {
+  content: "\e901";
+  color: #fdafaf;
+}
+
+radio-list :checked + ._icon-check::after {
+  color: #0010c4;
 }

@@ -3,5 +3,7 @@ radio-list {
 }
 
 body {
-  margin-top: 50px;
+  padding-top: 50px;
+  max-width: 1250px;
+  margin: auto;
 }
